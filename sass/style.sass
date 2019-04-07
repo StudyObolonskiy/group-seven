@@ -1,5 +1,6 @@
 $dark-color: #2a0000
 $main-color: #750000
+$blond-color: #fff
 *
     box-sizing: border-box
     margin: 0
@@ -17,7 +18,7 @@ $main-color: #750000
         list-style-type: none
         justify-content: space-around
         align-items: center
-        color: #fff
+        color: $blond-color
         li:after
             content: ''
             display: block
@@ -35,7 +36,7 @@ $main-color: #750000
 .main
     width: 100%
     height: 650px
-    background-color: $dark-color
+    background-color: $dark-color    
     &-block
         min-height: 300px
         width: 75%
@@ -45,18 +46,18 @@ $main-color: #750000
         background-color: rgba(0, 0, 0, 0.4)
         border: 6px solid $main-color
         &-link
-            color: #fff
+            color: $blond-color
             font-size: 22px
             font-weight: bold
             &:after
                 content: ''
                 display: block
                 height: 3px
-                background-color: #fff
+                background-color: $blond-color
                 width: 20%
                 margin: 4px auto 0
         &-title
-            color: #fff
+            color: $blond-color
             text-transform: uppercase
             font-size: 44px
             margin-top: 30px
@@ -65,79 +66,143 @@ $main-color: #750000
             text-transform: uppercase
             font-size: 22px
             margin-top: 30px
-.features
-    width: 100%
+.content
     background-color: $dark-color
-    .info
+    width: 100%
+    &:before
+        content: ''
+        height: 4px
+        display: block
+        background-color: $dark-color
+        margin-top: -2px
+    .features
         width: 100%
-        background-color: #753b00
-        padding: 40px
-        box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.8)
-        &-header
+        .info
             width: 100%
-            height: 60px
-            display: flex
-            justify-content: space-around
-            &-tab
-                color: $main-color
-                font-size: 22px
-                font-weight: bold
-                cursor: pointer
-                &:after
-                    content: ''
-                    display: block
-                    width: 0%
-                    height: 3px
-                    background-color: $main-color
-                    margin-top: 4px
-                    transition: 0.4s
-                &:hover:after
-                    width: 60%
-        &-tabcontent
-            width: 100%
-            display: flex
-            transition: 0.3s            
-            .description
-                width: 50%
-                &-title
+            background-color: #753b00
+            padding: 40px
+            box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.8)
+            &-header
+                width: 100%
+                height: 60px
+                display: flex
+                justify-content: space-around
+                &-tab
                     color: $main-color
-                    font-size: 34px
+                    font-size: 22px
+                    font-weight: bold
+                    cursor: pointer
                     &:after
                         content: ''
                         display: block
-                        background-color: $main-color
-                        width: 25%
+                        width: 0%
                         height: 3px
+                        background-color: $main-color
                         margin-top: 4px
-                &-text
-                    color: #fff
-                    font-weight: 300
-                    margin-top: 30px
-                    padding-right: 20px
-                &-btn
-                    width: 50%
-                    height: 45px
-                    margin-top: 30px
-                    color: $main-color
-                    border: 1px solid $main-color
-                    font-size: 14px
-                    text-transform: uppercase
-                    font-weight: bold
-                    text-align: center
-                    line-height: 43px
-                    cursor: pointer
-                    &:hover
-                        box-shadow: 0px 0px 5px $main-color
-            .photo
-                order: 1
-                width: 50%
+                        transition: 0.4s
+                    &:hover:after
+                        width: 60%
+            &-tabcontent
+                width: 100%
                 display: flex
-                align-items: center
-                
-                img
-                    width: 100%
-                    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8)
-        .hide
-            display: none
-        .show
-            display: flex
+                transition: all 5s ease            
+                .description
+                    width: 50%
+                    &-title
+                        color: $main-color
+                        font-size: 34px
+                        &:after
+                            content: ''
+                            display: block
+                            background-color: $main-color
+                            width: 25%
+                            height: 3px
+                            margin-top: 4px
+                    &-text
+                        font-family: 'Merriweather', serif
+                        color: $blond-color
+                        font-weight: 300
+                        margin-top: 30px
+                        padding-right: 20px
+                    &-btn
+                        width: 180px
+                        height: 45px
+                        margin-top: 30px
+                        color: $main-color
+                        border: 1px solid $main-color
+                        font-size: 14px
+                        text-transform: uppercase
+                        font-weight: bold
+                        text-align: center
+                        line-height: 43px
+                        cursor: pointer
+                        &:hover
+                            box-shadow: 0px 0px 5px $main-color
+                .photo
+                    order: 1
+                    width: 50%
+                    display: flex
+                    align-items: center
+                    
+                    img
+                        width: 100%
+                        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8)
+            .hide
+                display: none
+            .show
+                display: flex
+    .footer-block
+        width: 100%
+        padding: 30px
+        .social-block
+            width: 100%
+            &-title
+                color: $blond-color
+                font-size: 25px
+                text-align: center
+            &-links
+                display: flex
+                justify-content: space-around
+                padding-top: 20px
+                a
+                    padding: 5px 0 5px
+                    img
+                        width: 70px
+                        height: 70px
+                        border-radius: 10px
+                        transition: all 0.5s ease
+                        &:hover
+                            transform: rotate(360deg)
+        .contact-block
+            width: 100%
+            &-title
+                text-align: center
+                color: $blond-color
+                font-size: 25px
+                padding-left: 10%
+            &-links
+                padding-top: 20px
+                .phone-link
+                    display: flex
+                    justify-content: center
+                    img
+                        height: 22px
+                    a
+                        color: $blond-color
+                        font-size: 22px
+                        text-decoration: none
+                .personal-message
+                    display: flex
+                    justify-content: center
+                    a
+                        display: block
+                        font-size: 22px
+                        text-decoration: none
+                        color: $blond-color
+                        border: 1px solid $blond-color
+                        border-radius: 10px
+                        padding: 10px
+                        margin-top: 10px
+                        transition: 0.5s
+                        &:hover
+                            background-color: $main-color
