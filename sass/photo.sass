@@ -1,0 +1,21 @@
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    outline: none
+@import 'variables'
+@import 'header'
+@import 'central'
+.content
+    background-color: $dark-color
+    width: 100%
+    &::before
+        content: ''
+        height: 4px
+        display: block
+        background-color: $dark-color
+        margin-top: -2px
+    @import 'photo-block'
+    @import 'price'
+@import 'footer'

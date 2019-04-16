@@ -1,0 +1,65 @@
+.footer-block
+    width: 100%
+    padding: 30px
+    background: $dark-color
+    &::before
+        content: ''
+        height: 4px
+        background: $dark-color
+        margin-top: -2px
+    .social-block
+        width: 100%
+        &-title
+            color: $blond-color
+            font-size: 25px
+            text-align: center
+        &-links
+            display: flex
+            justify-content: space-around
+            padding-top: 20px
+            a
+                padding: 5px 0 5px
+                img
+                    width: 70px
+                    height: 70px
+                    border-radius: 10px
+                    transition: all 0.5s ease
+                    &:hover
+                        transform: rotate(360deg)
+    .contact-block
+        width: 100%
+        &-title
+            text-align: center
+            color: $blond-color
+            font-size: 25px
+            // padding-left: 10%
+        &-links
+            padding-top: 20px
+            .phone-link
+                display: flex
+                justify-content: center
+                img
+                    height: 22px
+                a
+                    color: $blond-color
+                    font-size: 22px
+                    text-decoration: none
+                    @media screen and (max-width: 320px)
+                        font-size: 20px
+            .personal-message
+                display: flex
+                justify-content: center
+                a
+                    display: block
+                    font-size: 22px
+                    text-decoration: none
+                    color: $blond-color
+                    border: 1px solid $blond-color
+                    border-radius: 10px
+                    padding: 10px
+                    margin-top: 10px
+                    transition: 0.5s
+                    @media screen and (max-width: 320px)
+                        font-size: 20px
+                    &:hover
+                        background-color: $main-color

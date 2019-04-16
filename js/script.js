@@ -2,11 +2,10 @@ window.addEventListener('DOMContentLoaded', () =>{
 
     'use strict';
 
-    let tab = document.querySelectorAll('.info-header-tab'), // получаем кнопки
-        info = document.querySelector('.info-header'), //получаем родителя кнопок
-        tabContent = document.querySelectorAll('.info-tabcontent'); // получаем сам контент
+    let tab = document.querySelectorAll('.info-header-tab'),
+        info = document.querySelector('.info-header'),
+        tabContent = document.querySelectorAll('.info-tabcontent');
 
-    // скрываем весь контент кроме первого
     function hideTabcontent(a){
         for (let i = a; i < tabContent.length; i++){
             tabContent[i].classList.remove('show');
